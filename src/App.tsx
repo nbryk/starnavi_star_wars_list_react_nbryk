@@ -1,14 +1,25 @@
 // src/App.tsx
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+// import DetailsPage from './pages/DetailsPage';
+
 function App() {
   return (
-    <>
-      <div className="text-center p-8 bg-blue-600 text-white rounded-xl shadow-lg">
-        <p className="text-2xl font-bold">
-          Тимчасово - тут буде сторінка компонент
-        </p>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+
+        {/* TODO: Replace placeholder with the real DetailsPage */}
+        <Route
+          path="/characters/:id"
+          element={<p>Деталі героя (DetailsPage)</p>}
+        />
+
+        {/* Fallback for unknown routes */}
+        <Route path="*" element={<p>404 Not Found</p>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -7,18 +7,19 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   test: {
-    // Встановлює jsdom як середовище для емуляції DOM, що є обов'язковим для React
+    // Use jsdom environment for React testing
     environment: "jsdom",
 
-    // Додає функціонал @testing-library/jest-dom
+    // Include setup file for @testing-library/jest-dom
     setupFiles: ["./src/setupTests.ts"],
 
-    // Налаштування для звітів про покриття коду
+    // Code coverage configuration
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
-      // Вказує, які файли аналізувати
+      // Files to include in coverage
       include: ["src/**/*.{ts,tsx}"],
+      // Files to exclude from coverage
       exclude: ["src/main.tsx", "src/types.ts"],
     },
   },
