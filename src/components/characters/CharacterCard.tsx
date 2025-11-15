@@ -33,7 +33,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({ person }) => {
       <HeroImage
         id={personId}
         name={person.name}
-        className="w-full sm:w-64 md:w-80 h-auto"
+        className="w-full aspect-square object-cover mb-4 rounded-md"
       />
 
       {/* Basic info */}
