@@ -1,13 +1,22 @@
 // src/api/sw/filmsApi.ts
-//import { api } from "../client";
-import axios from "axios";
+
+import { api } from "../client"; // Use the configured Axios client
 import type { Film } from "../../types/sw.d";
+import { throttledPromiseAll } from "../utils";
 
 /**
- * Get a single movie by full URL
+ * Fetch a single film by its relative path (e.g., 'films/1/').
  */
-export async function fetchFilmByUrl(url: string): Promise<Film> {
-  const response = await axios.get(url);
-
+export async function fetchFilmByPath(path: string): Promise<Film> {
+  // The 'api' client will prepend the base URL
+  const response = await api.get(path);
   return response.data;
+}
+
+/**
+ * Fetch multiple films in parallel with concurrency limit.
+ * Limits to 3 simultaneous requests.
+ */
+export async function fetchFilmsByPaths(paths: string[]): Promise<Film[]> {
+  return throttledPromiseAll(paths, fetchFilmByPath, 3);
 }

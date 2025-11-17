@@ -1,4 +1,4 @@
-//src/components/HeroList/HeroCard.tsx
+//src/components/characters/CharacterCard.tsx
 
 import { Link } from "react-router-dom";
 import type { Person } from "../../types/sw";

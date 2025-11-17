@@ -1,12 +1,23 @@
 // src/api/sw/starshipsApi.ts
-import axios from "axios";
+import { api } from "../client";
 import type { Starship } from "../../types/sw.d";
+import { throttledPromiseAll } from "../utils";
 
 /**
- * Get a single starship by full URL (який приходить у зв'язках Person.starships).
+ * Fetch a single starship by its full URL (as returned in Person.starships).
  */
-export async function fetchStarshipByUrl(url: string): Promise<Starship> {
-  const response = await axios.get(url);
+export async function fetchStarshipByPath(path: string): Promise<Starship> {
+  const response = await api.get(path);
 
   return response.data;
+}
+
+/**
+ * Fetch multiple starships in parallel with concurrency limit.
+ * Limits to 3 simultaneous requests.
+ */
+export async function fetchStarshipsByPaths(
+  paths: string[]
+): Promise<Starship[]> {
+  return throttledPromiseAll(paths, fetchStarshipByPath, 3);
 }
