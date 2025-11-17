@@ -17,6 +17,7 @@ export default defineConfig({
     },
   },
   test: {
+    globals: true,
     // Use jsdom environment for React testing
     environment: "jsdom",
 

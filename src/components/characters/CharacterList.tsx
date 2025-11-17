@@ -3,13 +3,8 @@
 import { CharacterCard } from "./CharacterCard";
 import type { Person } from "../../types/sw";
 
-// Інтерфейс для пропсів
 interface CharacterListProps {
   characters: Person[];
-  // TODO: Add pagination handlers later (onNextPage, onPrevPage, currentPage)
-  // onNextPage: () => void;
-  // onPrevPage: () => void;
-  // currentPage: number;
 }
 
 export const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
@@ -24,8 +19,6 @@ export const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
       {characters.map((person) => (
         <CharacterCard key={person.url} person={person} />
       ))}
-
-      {/* TODO: Add pagination component here */}
     </div>
   );
 };
