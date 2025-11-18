@@ -110,4 +110,4 @@ The application consumes data from the following external Star Wars API endpoint
 
 ## Deployed Version
 
-[DEPLOYMENT LINK]
+[DEMO](https://starnavi-star-wars-list-react-nbryk.vercel.app/)
