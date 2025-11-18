@@ -1,5 +1,3 @@
-//src/hooks/useHeroDetails.ts
-
 import { useEffect, useState } from "react";
 import type { Film, Person, Starship } from "../types/sw";
 import { fetchPerson } from "../api/sw/peopleApi";
@@ -19,7 +17,6 @@ export const useHeroDetails = (heroId: string | undefined) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Validate that heroId exists
     if (!heroId) return;
 
     // Reset state and start loading

@@ -1,5 +1,3 @@
-// src/types/sw.d.ts
-
 /**
  * Star Wars character
  */

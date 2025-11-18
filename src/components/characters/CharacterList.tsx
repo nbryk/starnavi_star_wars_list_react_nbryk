@@ -1,5 +1,3 @@
-// src/components/characters/CharacterList.tsx
-
 import { CharacterCard } from "./CharacterCard";
 import type { Person } from "../../types/sw";
 

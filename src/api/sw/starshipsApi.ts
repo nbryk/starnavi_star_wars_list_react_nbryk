@@ -1,4 +1,3 @@
-// src/api/sw/starshipsApi.ts
 import { api } from "../client";
 import type { Starship } from "../../types/sw.d";
 import { throttledPromiseAll } from "../utils";

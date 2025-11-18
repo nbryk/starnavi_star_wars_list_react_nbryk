@@ -1,4 +1,3 @@
-//src/types/graph.d.ts
 // Node types used in the graph
 export interface GraphNode {
   id: string; // Unique node ID (e.g., "person-1", "film-3", "ship-10")

@@ -1,4 +1,3 @@
-// src/api/sw/peopleApi.ts
 import { api } from "../client";
 import type { Person } from "../../types/sw";
 import type { PaginatedResponse } from "../../types/api";

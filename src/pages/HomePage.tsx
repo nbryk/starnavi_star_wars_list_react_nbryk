@@ -1,12 +1,8 @@
-// src/pages/HomePage.tsx
-
 import { CharacterList } from "../components/characters/CharacterList";
 import { PaginationControls } from "../components/common/PaginationControls";
 import { useCharactersData } from "../hooks/useCharactersData";
-//import { mockCharacters } from "../utils/mockData";
 
 const HomePage: React.FC = () => {
-  // Load paginated characters using a custom hook
   const {
     characters,
     isLoading,
@@ -23,15 +19,11 @@ const HomePage: React.FC = () => {
     return <div className="text-center p-8">Loading heroes...</div>;
   }
 
-  // Display error message if fetching failed
   if (error) {
     return (
       <div className="text-center p-8 text-red-600 font-bold">{error}</div>
     );
   }
-
-  // Temporary mock data; will be replaced with API-based fetching
-  //const characters = mockCharacters;
 
   return (
     <div className="container mx-auto p-4">

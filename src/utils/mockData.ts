@@ -1,4 +1,3 @@
-//src/utils/mockData.ts
 import type { PaginatedResponse } from "../types/api";
 import type { Person } from "../types/sw";
 

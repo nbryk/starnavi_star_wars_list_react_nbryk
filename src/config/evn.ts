@@ -1,4 +1,3 @@
-//src/config/env.ts - wrapper for base URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const API_TIMEOUT_STR = import.meta.env.VITE_API_TIMEOUT;
 

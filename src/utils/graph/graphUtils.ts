@@ -1,5 +1,3 @@
-//src/utils/graph/graphUtils.ts
-
 import type { GraphData, GraphEdge, GraphNode } from "../../types/graph";
 import type { Film, Person, Starship } from "../../types/sw";
 import type { Node as RFNode, Edge as RFEdge } from "@xyflow/react";

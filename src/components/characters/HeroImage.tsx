@@ -1,5 +1,3 @@
-//src/components/characters/HeroImage.tsx
-
 import React, { useState } from "react";
 
 interface HeroImageProps {

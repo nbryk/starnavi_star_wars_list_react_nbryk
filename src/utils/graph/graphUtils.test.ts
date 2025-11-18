@@ -1,4 +1,3 @@
-//src/utils/graph/graphUtils.test.ts
 import { describe, it, expect } from "vitest";
 import { generateGraphData } from "./graphUtils";
 import type { Person, Film, Starship } from "../../types/sw";

@@ -6,10 +6,8 @@ import { generateGraphData } from "../utils/graph/graphUtils";
 import { GraphViz } from "../components/graph/GraphViz";
 
 const DetailsPage = () => {
-  // Get hero ID from the URL
   const { id } = useParams<{ id: string }>();
 
-  // Load hero-related data using a custom hook
   const { hero, films, starships, isLoading, error } = useHeroDetails(id);
 
   // Build graph structure only when input data changes
@@ -18,11 +16,9 @@ const DetailsPage = () => {
       return { nodes: [], edges: [] };
     }
 
-    // hero is guaranteed to be non-null here
     return generateGraphData(hero, films, starships);
   }, [hero, films, starships]);
 
-  // Validate that ID exists
   if (!id) {
     return (
       <div className="text-center p-8 text-red-600">
@@ -31,19 +27,16 @@ const DetailsPage = () => {
     );
   }
 
-  // Loading state
   if (isLoading) {
     return <div className="text-center p-8">Loading hero data...</div>;
   }
 
-  // Error state
   if (error) {
     return (
       <div className="text-center p-8 text-red-600 font-bold">{error}</div>
     );
   }
 
-  // No hero found after loading
   if (!hero) {
     return <div className="text-center p-8">No hero found.</div>;
   }

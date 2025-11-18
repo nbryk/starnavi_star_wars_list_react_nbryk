@@ -1,4 +1,3 @@
-//src/hooks/useCharactersData.ts
 import { useEffect, useState } from "react";
 import type { Person } from "../types/sw";
 import { fetchPeoplePage } from "../api/sw/peopleApi";

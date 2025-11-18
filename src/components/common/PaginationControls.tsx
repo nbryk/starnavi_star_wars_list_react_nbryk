@@ -1,5 +1,3 @@
-//src/components/common/PaginationControls.tsx
-
 export interface PaginationControlsProps {
   currentPage: number;
   canGoNext: boolean; // Whether the "Next" button should be enabled

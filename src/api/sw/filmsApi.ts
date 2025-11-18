@@ -1,5 +1,3 @@
-// src/api/sw/filmsApi.ts
-
 import { api } from "../client"; // Use the configured Axios client
 import type { Film } from "../../types/sw.d";
 import { throttledPromiseAll } from "../utils";

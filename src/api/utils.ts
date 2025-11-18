@@ -1,4 +1,3 @@
-//src/api/utils.ts
 /**
  * Limits concurrent execution of promises by processing them in batches.
  * @param array Array of items to process.

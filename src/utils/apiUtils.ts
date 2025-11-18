@@ -1,5 +1,3 @@
-//src/utils/apiUtils.ts
-
 /**
  * Generates a relative API path for a resource based on its type and numeric ID.
  * Example: generateResourcePath("films", 1) → "films/1/"

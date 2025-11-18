@@ -1,5 +1,3 @@
-// src/types/api.d.ts
-
 export interface PaginatedResponse<T> {
   count: number; // total number of items
   next: string | null; // URL of next page, or null if last page

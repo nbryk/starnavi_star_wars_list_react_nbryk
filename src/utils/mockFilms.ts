@@ -1,4 +1,3 @@
-//src/utils/mockFilms.ts
 import { type Film } from "../types/sw";
 
 export const mockFilms: Film[] = [

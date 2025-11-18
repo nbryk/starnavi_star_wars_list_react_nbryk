@@ -1,4 +1,3 @@
-//src/utils/mockStarships.ts
 import { type Starship } from "../types/sw";
 
 export const mockStarships: Starship[] = [

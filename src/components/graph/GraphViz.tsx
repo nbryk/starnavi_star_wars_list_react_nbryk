@@ -1,5 +1,3 @@
-//src/components/graph/GraphViz.tsx
-
 import React, { useCallback, useEffect, useRef } from "react";
 import {
   ReactFlow as RFComponent,
